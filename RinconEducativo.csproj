@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>RinconEducativo</RootNamespace>
+    <AssemblyName>RinconEducativo</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.6" />
+  </ItemGroup>
+  <!-- <ItemGroup>
+      <Content Include="plantillas\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+      <Content Include="generado\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup> -->
+</Project>

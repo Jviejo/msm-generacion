@@ -1,0 +1,75 @@
+﻿/* aplicación general */
+/*
+*{
+    background-color: grey;
+}
+                            */
+
+/* control sobre la apertura de ramas */
+ul.hijos .hijos, .applet ul {
+    display: none
+}
+
+/*  cabecera página */
+h1.mdl-card__title-text {
+    font-size: 300%;
+    color: brown;
+    font-weight: bold;
+    text-align: center;
+    background-color: silver;
+    padding: 3px;
+}
+
+/*  título directorio */
+h2.mdl-card__title-text {
+    font-size: 180%;
+    color: brown;
+    font-weight: bold;
+}
+
+/* módulos de la plantilla ????*/
+.card {
+    width: 100%
+}
+
+/* NO LO SE */
+.banner > .mdl-card__title {
+    color: #fff;
+    height: 50px;
+    background-color: darkorange;
+}
+
+/* listas */
+ul li a {
+    font-size: 120%;
+}
+
+/* menú directorio */
+.titulo {
+    font-size: 200%;
+    color: brown;
+}
+
+/* directorios padres */
+div > ul > li.folder > a {
+    color: brown;
+    font-weight: bold;
+}
+
+/* directorios hijos */
+ul.hijos > li.folder > a {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* subtítulos en index */
+.mdl-card__title-text {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/*  listado de ficheros subidos */
+#estadisticas a {
+    color: brown;
+    font-size: small;
+}
