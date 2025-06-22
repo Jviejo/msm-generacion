@@ -20,4 +20,4 @@ rsync -avP --iconv=. -e "ssh -i ~/.ssh/ec2-jvh2025-key" ./generado/* root@217.72
 ```
 
 para validar el certificado ssl
-https://www.ssllabs.com/ssltest/analyze.html?d=msm.rinconeducativo.com
+https://www.ssllabs.com/ssltest/analyze.html?d=www.rinconeducativo.com
