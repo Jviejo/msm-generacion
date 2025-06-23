@@ -1,4 +1,16 @@
 # 
+
+### Crear una ssh key conn ecc
+```
+ssh-keygen -t ed25519 -C "jvh@tributec.es" -f ~/.ssh/msm-key
+```
+
+Transferir la clave pública al host
+```
+ssh-copy-id -i ~/.ssh/msm-key.pub root@217.72.207.5
+```
+
+
 Instalar .NET 9.0
 ```
 brew install --cask dotnet-sdk
