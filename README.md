@@ -2,7 +2,7 @@
 
 ### Crear una ssh key conn ecc
 ```
-ssh-keygen -t ed25519 -C "jvh@tributec.es" -f ~/.ssh/msm-key
+ssh-keygen -t ed25519 -C "msm@rinconeducativo.es" -f ~/.ssh/msm-key
 ```
 
 Transferir la clave pública al host
