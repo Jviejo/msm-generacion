@@ -1,5 +1,10 @@
 # 
 
+Clonar el repositorio
+```
+git clone https://github.com/Jviejo/msm-generacion
+```
+
 ### Crear una ssh key conn ecc
 ```
 ssh-keygen -t ed25519 -C "msm@rinconeducativo.es" -f ~/.ssh/msm-key
@@ -28,7 +33,7 @@ dotnet run
 
 Subir la aplicación a la máquina virtual.
 ```
-rsync -avP --iconv=. -e "ssh -i ~/.ssh/ec2-jvh2025-key" ./generado/* root@217.72.207.5:/var/www/msm.tributec.es/
+rsync -avP --iconv=. -e "ssh -i ~/.ssh/msm-key ./generado/* root@217.72.207.5:/var/www/msm.tributec.es/
 ```
 
 para validar el certificado ssl
