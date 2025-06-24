@@ -34,6 +34,7 @@ dotnet run
 Instalar rsync
 ```
 brew install rsync
+brew upgrade rsync
 ```
 
 Subir la aplicación a la máquina virtual.
