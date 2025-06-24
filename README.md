@@ -39,7 +39,7 @@ brew upgrade rsync
 
 Subir la aplicación a la máquina virtual.
 ```
-/usr/local/bin/rsync -avP  --iconv=. -e "ssh -i ~/.ssh/msm-key" ./generado/* root@217.72.207.5:/var/www/msm.tributec.es/
+dotnet build && dotnet run && /usr/local/bin/rsync -avP  --iconv=. -e "ssh -i ~/.ssh/msm-key" ./generado/* root@217.72.207.5:/var/www/msm.tributec.es/
 ```
 
 para validar el certificado ssl
