@@ -151,7 +151,7 @@ namespace GeneracionPaginas
                 XElement pagina = XElement.Load("plantillas/pagina.htm");
                 XElement lista = pagina.Element("body").Element("div").Element("ul");
                 lista.Add(GetDirectorio(d1));
-                FileStream s = File.Create("generado/" + d1.Name + ".html");
+                FileStream s = File.Create("generado/" + EncodeUrl(d1.Name) + ".html");
                 pagina.Save(s);
                 s.Close();
             }
