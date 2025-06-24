@@ -121,7 +121,6 @@ namespace GeneracionPaginas
                 GetDirectorio1(d1, ListaFicheros);
             }
 
-            Console.WriteLine(ListaFicheros.Count());
             foreach (var i in ListaFicheros.OrderByDescending(i => i.fecha).Where(i => i.nombrecorto != ".DS_Store"))
             {
                 estadistica.Add(new XElement("li",
@@ -140,20 +139,21 @@ namespace GeneracionPaginas
 
             XElement menu1 = XElement.Load("plantillas/plantillaindex.htm");
             XElement menu = menu1.XPathSelectElement("//*[@id = 'menu']").Element("ul");
-
+            var index = 0;
             foreach (DirectoryInfo d1 in dir.GetDirectories().OrderBy(i => i.Name))
             {
                 if (d1.FullName.IndexOf("\\Logos") >= 0)
                     continue;
 
                 menu.Add(new XElement("li",
-                      new XElement("a", new XAttribute("href", EncodeUrl(d1.Name + ".html")), d1.Name)));
+                      new XElement("a", new XAttribute("href", index.ToString() + ".html"), d1.Name)));
                 XElement pagina = XElement.Load("plantillas/pagina.htm");
                 XElement lista = pagina.Element("body").Element("div").Element("ul");
                 lista.Add(GetDirectorio(d1));
-                FileStream s = File.Create("generado/" + EncodeUrl(d1.Name) + ".html");
+                FileStream s = File.Create("generado/" + index.ToString() + ".html");
                 pagina.Save(s);
                 s.Close();
+                index++;
             }
 
             XElement estadisticas = menu1.XPathSelectElement("//*[@id = 'estadisticas']").Element("ul");
